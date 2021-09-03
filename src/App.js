@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { PDFViewer } from "@react-pdf/renderer";
+import Invoice from "./components/Invoice";
+import {invoiceData} from "./data";
+
+import "./App.css";
 
 function App() {
+  console.log("APPP", invoiceData);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <PDFViewer width="1400" height="1000" className="app">
+        <Invoice invoice={invoiceData} />
+      </PDFViewer>
+    </>
   );
 }
 
