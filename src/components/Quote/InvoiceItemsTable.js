@@ -13,14 +13,14 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     marginTop: 24,
     borderWidth: 1,
-    borderColor: "#bff0fd",
+    borderColor: "#E5E7EB",
   },
 });
 
 const InvoiceItemsTable = ({ invoice }) => (
   <View style={styles.tableContainer}>
     <InvoiceTableHeader />
-    <TableGroup />
+
     <InvoiceTableRow items={invoice.items} />
     <InvoiceTableFooter items={invoice.items} />
   </View>

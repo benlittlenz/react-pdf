@@ -1,12 +1,12 @@
 import React from "react";
 import { Text, View, StyleSheet } from "@react-pdf/renderer";
 
-const borderColor = "#90e5fc";
+const borderColor = "#E5E7EB";
 const styles = StyleSheet.create({
   row: {
     flexDirection: "row",
-    borderBottomColor: "#bff0fd",
-    borderBottomWidth: 1,
+    // borderBottomColor: "#bff0fd",
+    // borderBottomWidth: 1,
     alignItems: "center",
     height: 24,
     fontSize: 12,
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const InvoiceTableFooter = ({ items }) => {
+export const Footer = ({ items }) => {
   const total = items
     .map((item) => item.qty * item.rate)
     .reduce((accumulator, currentValue) => accumulator + currentValue, 0);
@@ -38,4 +38,3 @@ const InvoiceTableFooter = ({ items }) => {
   );
 };
 
-export default InvoiceTableFooter;
